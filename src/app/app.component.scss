@@ -1,0 +1,51 @@
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aside {
+    background-color: black;
+    width: 250px;
+    padding: 10px 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    > div {
+      text-align: center;
+      padding: 20px 0;
+      img {
+        max-width: 100%;
+        width: 140px;
+      }
+    }
+
+    > nav {
+      margin-top: 20px;
+      ul {
+        list-style: none;
+        li {
+          a {
+            color: #b3b3b3;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s;
+            i {
+              margin: 0 10px 20px 0;
+            }
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    margin-left: 250px;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #333;
+  }
+}

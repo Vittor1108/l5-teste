@@ -1,0 +1,30 @@
+<section>
+  <div>
+    <article>
+      <h1>Artistas Mais Escutados</h1>
+      <nav>
+        <span>&lt;</span>
+        <span>&gt;</span>
+      </nav>
+      <div>
+        <article *ngFor="let artist of topArtist.artists.artist">
+          <img src="{{ artist.image[2]['#text'] }}" alt="" />
+          <p>{{ artist.name }}</p>
+        </article>
+      </div>
+    </article>
+    <article>
+      <h1>Albuns Mais Escutados</h1>
+      <nav>
+        <span>&lt;</span>
+        <span>&gt;</span>
+      </nav>
+      <div>
+        <article *ngFor="let albuns of topAlbuns.tags.tag">
+          <img src="https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png" alt="" />
+          <p>{{ albuns.name }}</p>
+        </article>
+      </div>
+    </article>
+  </div>
+</section>
