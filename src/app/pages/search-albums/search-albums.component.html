@@ -1,5 +1,24 @@
 <section>
-  <div>
-
+  <div class="containerInput">
+    <input
+      type="text"
+      placeholder="Insira o nome do Artista"
+      [(ngModel)]="nameAlbum"
+    />
+    <button (click)="searchAlbum()" type="button">Pesquisar</button>
   </div>
+
+  <div class="containerArtists" *ngIf="allAlbums.length > 0">
+    <article *ngFor="let album of allAlbums">
+      <img src="{{ album.image[3]['#text'] }}" />
+      <p>Álbum: {{ album.name }}</p>
+      <p>
+        URL: <a href="{{ album.url }}" target="_blank">{{ album.url }}</a>
+      </p>
+    </article>
+  </div>
+
+  <!-- <p *ngIf="allalbumFind.length === 0 && noArtist">
+    Nenhum Artista Encontrado
+  </p> -->
 </section>

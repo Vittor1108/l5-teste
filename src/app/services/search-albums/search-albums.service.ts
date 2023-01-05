@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { token, urlAPI } from 'src/app/config/apiConfig';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { IAlbums } from 'src/app/interfaces/ISearchAlbums';
 
 @Injectable({
   providedIn: 'root',
@@ -11,19 +13,9 @@ export class SearchAlbumsService {
 
   constructor(private readonly http: HttpClient) {}
 
-  public searchAlbum = (nameAlbum: string) => {
-    this.http
-      .get(
-        `${this.apiURL}/?method=album.search&album=belive&api_key=${this.tokenAPI}&format=json`
-      )
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-        },
-
-        error: (err) => {
-          console.log(err);
-        },
-      });
+  public searchAlbum = (nameAlbum: string): Observable<IAlbums> => {
+    return this.http.get<IAlbums>(
+      `${this.apiURL}/?method=album.search&album=${nameAlbum}&api_key=${this.tokenAPI}&format=json`
+    );
   };
 }
