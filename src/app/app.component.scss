@@ -10,6 +10,7 @@ div {
     position: fixed;
     top: 0;
     left: 0;
+    transition: all 0.3s;
     > div {
       text-align: center;
       padding: 20px 0;
@@ -37,8 +38,26 @@ div {
               color: white;
             }
           }
+          .linkActive {
+            color: white;
+            font-weight: bold;
+          }
         }
       }
+    }
+
+    > span {
+      color: white;
+      text-align: right;
+      display: none;
+      cursor: pointer;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      transform: translateX(-100%);
     }
   }
 
@@ -47,5 +66,23 @@ div {
     width: 100vw;
     overflow-x: hidden;
     background-color: #333;
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
   }
+
+  > span {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.toggleMenu {
+  transform: translate(0) !important;
 }

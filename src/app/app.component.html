@@ -1,21 +1,23 @@
 <div>
+  <span (click)="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
   <aside>
+    <span (click)="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
     <div>
       <img src="../../../assets/images/l5networks.png" alt="Logo l5networks" />
     </div>
     <nav>
       <ul>
         <li>
-          <a href=""><i class="fa-solid fa-house"></i> Inicio</a>
+          <a routerLink=""><i class="fa-solid fa-house"></i> Inicio</a>
         </li>
         <li>
-          <a href=""
+          <a routerLink="search-artist" routerLinkActive="linkActive"
             ><i class="fa-solid fa-magnifying-glass"></i>Pesquisar por
             Artistas</a
           >
         </li>
         <li>
-          <a href=""
+          <a routerLink="search-album" routerLinkActive="linkActive"
             ><i class="fa-solid fa-magnifying-glass"></i>Pesquisar por Álbuns</a
           >
         </li>

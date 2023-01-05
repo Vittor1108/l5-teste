@@ -1,0 +1,93 @@
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .containerInput {
+    width: 90%;
+    text-align: center;
+    margin-top: 40px;
+    input {
+      width: 90%;
+      max-width: 350px;
+      border-radius: 10px 0 0 10px;
+      padding: 5px 5px 5px 20px;
+      border: 1px solid black;
+      outline: 1px solid black;
+      &::placeholder {
+        padding-left: 20px;
+      }
+
+      @media screen and (max-width: 768px){
+        display: block;
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+    }
+
+    button {
+      border-radius: 0 10px 10px 0;
+      padding: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+    }
+
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+
+  }
+
+  .containerArtists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    article {
+      margin: 0 15px 30px 0;
+      background-color: black;
+      padding: 10px;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      font-size: 14px;
+      max-width: 250px;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover{
+        transform: translateY(-10px);
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      a {
+        word-wrap: break-word;
+      }
+    }
+    width: 100%;
+  }
+
+  > p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    width: 100%;
+  }
+}

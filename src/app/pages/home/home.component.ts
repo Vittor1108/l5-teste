@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
     this.homeService.getTopAlbuns().subscribe({
       next: (res) => {
         this.topAlbuns = res;
-        console.log(this.topAlbuns.tags.tag)
       },
       error: (err) => {
         console.log(err);
