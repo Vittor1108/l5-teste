@@ -16,7 +16,9 @@ O projeto visa a construção de uma aplicação utilizando a API da plataforma 
 
 2 - Também é necessário realizar a instalação do angular-cli na sua máquina. Após a instalação do NPM, abra o CMD e digite o seguinte comando "npm install -g @angular/cli".
 
-3 - Após a instalção do angular-cli, realize o download do projeto, abra o CMD dentro da pasta raiz do projeto e digite o comando "ng serve". 
+4 - Após a instalação do angular-cli, entre dentro da pasta raiz do projeto e baixe as depedências do projeto utilizando o comando "npm i" dentro do CMD.
+
+3 - Para rodar o projeto basta abrir o CMD dentro da pasta raiz do projeto e digitar o comando "ng serve". 
 
 4 - Assim o projeto estará funcionado e rodando na sua máquina. Para acessar basta "http://localhost:4200".
 
