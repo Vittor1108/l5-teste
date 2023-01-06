@@ -1,27 +1,24 @@
 # L5Teste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+Este projeto foi desenvolvimento para o teste de DEV-ANGULAR na empresa L5.networks.
 
-## Development server
+O projeto visa a construção de uma aplicação utilizando a API da plataforma https://www.last.fm/api. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Objetivos - 
 
-## Code scaffolding
+1 - Criar uma aplicação front-end com angular que atráves da API last.fm, realize buscas de artistas e álbuns.
+2 - Salvar o histórico das pesquisas no localStorage.
+3 - Versionar e publicar o código no github.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Rodar a aplicação.
 
-## Build
+1 - Para rodar a aplicação é necessário ter ao  menos o NPM em sua máquina. Para isso acesse o site - https://nodejs.org/en/ e realize o download do NodeJs que o NPM será instalado automáticamente.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2 - Também é necessário realizar a instalação do angular-cli na sua máquina. Após a instalação do NPM, abra o CMD e digite o seguinte comando "npm install -g @angular/cli".
 
-## Running unit tests
+3 - Após a instalção do angular-cli, realize o download do projeto, abra o CMD dentro da pasta raiz do projeto e digite o comando "ng serve". 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4 - Assim o projeto estará funcionado e rodando na sua máquina. Para acessar basta "http://localhost:4200".
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
