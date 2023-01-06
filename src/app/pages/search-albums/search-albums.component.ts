@@ -10,6 +10,7 @@ import { SearchAlbumsService } from 'src/app/services/search-albums/search-album
 export class SearchAlbumsComponent implements OnInit {
   public nameAlbum: string;
   public allAlbums: IAlbum[] = [];
+  public notAlbum: boolean = false;
   constructor(private readonly albumService: SearchAlbumsService) {}
 
   ngOnInit(): void {}
@@ -23,6 +24,14 @@ export class SearchAlbumsComponent implements OnInit {
     this.albumService.searchAlbum(this.nameAlbum).subscribe({
       next: (res) => {
         this.allAlbums = res.results.albummatches.album;
+        this.allAlbums.length === 0
+        ? (this.notAlbum = true)
+        : (this.notAlbum = false);
+        const historic = {
+          search: res.results['@attr'].for,
+          results: res.results.albummatches.album,
+        };
+        localStorage.setItem('albumHistoric', JSON.stringify(historic));
       },
 
       error: (err) => {

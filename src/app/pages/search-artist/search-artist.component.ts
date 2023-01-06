@@ -27,9 +27,17 @@ export class SearchArtistComponent implements OnInit {
     this.searchArtistService.findArtist(this.nameArtist).subscribe({
       next: (res) => {
         this.allArtistFind = res.results.artistmatches.artist;
+
         this.allArtistFind.length === 0
           ? (this.noArtist = true)
           : (this.noArtist = false);
+
+        const historic = {
+          search: res.results['@attr'].for,
+          result: res.results.artistmatches.artist,
+        };
+
+        localStorage.setItem('artistHistoric', JSON.stringify(historic));
       },
 
       error: (err) => {

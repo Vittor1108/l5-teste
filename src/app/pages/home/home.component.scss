@@ -1,45 +1,44 @@
 section {
-  height: 100vh;
+  // height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 5vw;
   > div {
     width: 100%;
+    margin: 40px auto;
+    .titleContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        padding: 5px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
     > article {
-      &:nth-child(1){
+      &:nth-child(1) {
         margin-bottom: 60px;
       }
       h1 {
         color: white;
         font-weight: lighter;
-        padding: 0 5vw;
       }
 
-      > nav {
-        margin-top: 20px;
-        padding: 0 5vw;
-        span {
-          color: #b3b3b3;
-          font-size: 32px;
-          font-weight: lighter;
-          cursor: pointer;
-          transition: all 0.3s;
-          &:nth-child(1) {
-            margin-right: 20px;
-          }
-
-          &:hover {
-            color: white;
-          }
-        }
-      }
-
-      > div {
+      > .containerSearch {
         display: flex;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
         margin-top: 20px;
-        overflow-x: hidden;
-        article{
+        article {
           padding: 10px;
           background-color: black;
           border-radius: 5px;
@@ -47,8 +46,28 @@ section {
           color: white;
           text-align: center;
           box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+          max-width: 250px;
+          width: 95% ;
+          margin-bottom: 40px;
+          transition: all 0.3s;
+
+          img {
+            max-width: 100%;
+            width: 100%;
+          }
+          &:hover {
+            transform: translateY(-10px);
+            cursor: pointer;
+          }
         }
       }
     }
   }
+}
+
+.alertSearch {
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  width: 100%;
 }

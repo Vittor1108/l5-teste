@@ -1,28 +1,35 @@
 <section>
   <div>
     <article>
-      <h1>Artistas Mais Escutados</h1>
-      <nav>
-        <span>&lt;</span>
-        <span>&gt;</span>
-      </nav>
-      <div>
-        <article *ngFor="let artist of topArtist.artists.artist">
+      <div class="titleContainer">
+        <h1>Historico pesquisa de Artista</h1>
+        <button *ngIf="historicArtist" (click)="clearHistoric(1)">
+          Limpar Histórico
+        </button>
+      </div>
+      <p *ngIf="!historicArtist" class="alertSearch">
+        Não há pesquisa de Artistas
+      </p>
+      <div class="containerSearch" *ngIf="historicArtist">
+        <article *ngFor="let artist of historicArtist!.result">
           <img src="{{ artist.image[2]['#text'] }}" alt="" />
           <p>{{ artist.name }}</p>
         </article>
       </div>
     </article>
     <article>
-      <h1>Albuns Mais Escutados</h1>
-      <nav>
-        <span>&lt;</span>
-        <span>&gt;</span>
-      </nav>
-      <div>
-        <article *ngFor="let albuns of topAlbuns.tags.tag">
-          <img src="https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png" alt="" />
-          <p>{{ albuns.name }}</p>
+      <div class="titleContainer">
+        <h1>Historico pesquisa de Álubm</h1>
+        <button *ngIf="historicAlbum" (click)="clearHistoric(2)">
+          Limpar Histórico
+        </button>
+      </div>
+      <p *ngIf="!historicAlbum" class="alertSearch">Não há pesquisa de Álubm</p>
+      <div class="containerSearch" *ngIf="historicAlbum">
+        <article *ngFor="let album of historicAlbum!.results">
+          <img src="{{ album.image[2]['#text'] }}" alt="" />
+          <p>{{ album.name }}</p>
+          <p>{{ album.artist }}</p>
         </article>
       </div>
     </article>

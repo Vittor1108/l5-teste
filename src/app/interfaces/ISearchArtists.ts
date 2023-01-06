@@ -22,3 +22,8 @@ interface Image {
   size: string;
   '#text': string;
 }
+
+export interface IHistoricArtist {
+  search: string;
+  result: IArrayArtist[];
+}

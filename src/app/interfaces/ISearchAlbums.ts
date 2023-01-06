@@ -21,3 +21,8 @@ interface IImage {
   size: string;
   '#text': string;
 }
+
+export interface IHistoricAlbum {
+  search: string;
+  results: IAlbum[];
+}
