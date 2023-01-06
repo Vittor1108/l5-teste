@@ -25,29 +25,28 @@ O projeto visa a construção de uma aplicação utilizando a API da plataforma 
 
 Onde será exibido seu histórico de pesquisa e opção de limpar seu histórico
 
-<img src="./src/app/assets/images/readme/homePage.jpeg">
+![WhatsApp Image 2023-01-05 at 22 45 09](https://user-images.githubusercontent.com/72480062/210914693-df1164c4-f9c9-4b61-8494-0f270cb8621a.jpeg)
 
 ## Álbum
 
 Pesquisa por album 
 
-<img src="./src/app/assets/images/readme/albumPage.jpeg">
+![WhatsApp Image 2023-01-05 at 22 44 52](https://user-images.githubusercontent.com/72480062/210914817-66a6f084-7ca9-408a-ba79-fc07a0a18bb6.jpeg)
 
 ## Artista
 
 Pesquisa por artista 
 
-<img src="./src/app/assets/images/readme/artist.jpeg">
-
+![WhatsApp Image 2023-01-05 at 22 44 12](https://user-images.githubusercontent.com/72480062/210914844-e5abd573-c585-4841-a13c-ba6ad0f279ff.jpeg)
 
 ### Técnlogias Utilizadas
 
-1 - Angular
-2 - TypeScript
-3 - HTML
-4 - SCSS
+1 - Angular <br>
+2 - TypeScript <br>
+3 - HTML <br>
+4 - SCSS <br:
 
 ### Links Profissionais 
 
-Linkedin - linkedin.com/in/vittor-daniel-a48a0b181/
+Linkedin - linkedin.com/in/vittor-daniel-a48a0b181/ <br>
 github - github.com/Vittor1108
